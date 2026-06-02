@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+env/
+*.db
+*.sqlite3
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+dist/
+.cache/
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Docker
+*.override.yml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
