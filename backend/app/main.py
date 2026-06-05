@@ -58,7 +58,17 @@ app.include_router(customers.router, prefix=PREFIX)
 app.include_router(orders.router, prefix=PREFIX)
 app.include_router(dashboard.router, prefix=PREFIX)
 
-
+@app.get("/")
+async def root():
+    return {
+        "app": "Inventory & Order Management System",
+        "version": "1.0.0",
+        "status": "running",
+        "docs": "/docs",
+        "health": "/health"
+    }
+    
+    
 @app.get("/health", tags=["Health"], summary="Health check")
 def health_check():
     return {
