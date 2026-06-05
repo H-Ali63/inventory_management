@@ -75,14 +75,14 @@ def seed():
         db.add_all([order1, order2])
         db.commit()
 
-        print("✅ Database seeded successfully!")
+        print("[OK] Database seeded successfully!")
         print(f"   - {len(products)} products")
         print(f"   - {len(customers)} customers")
         print(f"   - 2 orders")
 
     except Exception as e:
         db.rollback()
-        print(f"❌ Error seeding database: {e}")
+        print(f"[ERROR] Error seeding database: {e}")
         raise
     finally:
         db.close()

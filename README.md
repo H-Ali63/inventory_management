@@ -180,6 +180,12 @@ pip install -r requirements.txt
 cp .env.example .env
 # Edit .env — set DATABASE_URL to your local PostgreSQL
 
+# Make sure a PostgreSQL server is running on localhost:5432 before running migrations.
+# If you do not have PostgreSQL installed locally, start the Docker Compose services instead:
+#   docker compose up --build
+# Then run migrations inside the backend container:
+#   docker compose exec backend alembic upgrade head
+
 # Run migrations
 alembic upgrade head
 
